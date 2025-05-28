@@ -7,7 +7,8 @@ import Students from './src/Students';
 
 
 export default function App(){
-const [students, setStudents] = useState([]);
+
+  const [students, setStudents] = useState([]);
 
 useEffect(() => {
   
