@@ -4,6 +4,9 @@ import { useEffect, useState } from 'react';
 import api from "./src/services/api";
 import Students from './src/Students';
 
+
+
+export default function App(){
 const [students, setStudents] = useState([]);
 
 useEffect(() => {
@@ -25,7 +28,6 @@ useEffect(() => {
 
 
 
-export default function App() {
   return (
     <View style={styles.container}>
       <FlatList
