@@ -11,7 +11,7 @@ useEffect(() => {
     async function loadStudents() {
     try {
       const response = await api.get("baseJSON/master/datapp.json");
-      // console.log(response.data);
+      console.log(response.data);
       setStudents(response.data);
     }
   
