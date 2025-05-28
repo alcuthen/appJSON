@@ -1,14 +1,12 @@
 import { StyleSheet, View, FlatList } from 'react-native';
 import { useEffect, useState } from 'react';
 
-import api from "./src/services/api";
+import {api} from "./src/services/api";
 import Students from './src/Students';
-
-
 
 export default function App(){
 
-  const [students, setStudents] = useState([]);
+const [students, setStudents] = useState([]);
 
 useEffect(() => {
   
@@ -19,15 +17,12 @@ useEffect(() => {
       setStudents(response.data);
     }
   
-    catch (e) {
-      console.error(e);
+    catch (error) {
+      console.error('erro identificado',e);
   }
 }
   loadStudents();
-},
-[]);
-
-
+}, []);
 
   return (
     <View style={styles.container}>
